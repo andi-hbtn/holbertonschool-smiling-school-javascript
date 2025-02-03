@@ -1,0 +1,43 @@
+.slider-avatar-main{
+    width: 100%;
+    padding: 50px;
+    overflow: hidden;
+    background-color: #c371ff;
+}
+
+.avatar-image{position: relative;}
+.avatar-image > svg{
+    position: absolute;
+    top: 25%;
+    font-size: 60px;
+    color: #ffffff;
+}
+
+.avatar-image > img {
+    float: right;
+    clear: both;
+    border-radius: 50%;
+    width: 150px;
+}
+
+.avatar-desc{
+    position: relative;
+}
+
+.avatar-desc > svg{
+    position: absolute;
+    right: 0px;
+    top: 25%;
+    font-size: 60px;
+    color: #ffffff;
+}
+
+.avatar-desc > p{
+    width: 70%;
+    color: #ffffff;
+    font-weight: bold;
+}
+.avatar-desc > h5{
+    color: #ffffff;
+    font-size: 25px;
+}

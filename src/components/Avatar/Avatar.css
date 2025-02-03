@@ -1,6 +1,14 @@
-.avatar-container{border: 0px;}
+.avatar-container{
+    border: 0px;
+    background-color: transparent;
+}
 
 .image-avatar{
     width: 70%;
     margin: 0 auto;
+}
+
+.card-title , .card-text , .card-subtitle{
+    color: #ffffff;
+    text-align: center;
 }

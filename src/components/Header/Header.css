@@ -1,8 +1,65 @@
+header{
+    background-image: url('../../images//background.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.logo-menu-cnt{
+    padding-top: 50px;
+}
+
 .menu-container{
     list-style-type:none ;
 }
 
 .menu-container > li{
+    margin-right: 30px;
     display: inline-block;
     padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
 }
+
+.schooled-cnt{margin-top: 80px;}
+
+.schooled-cnt > h1{
+    font-size: 85px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+
+.schooled-cnt > ul{
+    list-style-type: none;
+    display: block;
+    width: 40%;
+    margin: 20px auto;
+}
+.schooled-cnt > ul > li{
+    display: inline-block;
+    width: 33%;
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.schooled-cnt > button{
+    display: block;
+    width: 15%;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.avatar-txt{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: #ffffff;
+}
+.avatar-txt > span{color: purple;}
