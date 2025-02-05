@@ -5,7 +5,6 @@ import { MdOutlineArrowBackIos } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import './SliderAvatar.css';
 
-
 const  SliderAvatar = () =>{
     const [active, setActive] = useState(0);
 

@@ -1,0 +1,16 @@
+.card-cnt{
+    background-color: transparent;
+    border: none;
+}
+
+.card-cnt > img {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.avatar-body > div , .avatar-body > p{
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
