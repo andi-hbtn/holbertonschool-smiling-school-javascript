@@ -1,4 +1,6 @@
-import {Container,Row,Col,Button} from 'react-bootstrap';
+import {Container,Row,Col,Button,Table} from 'react-bootstrap';
+import { FaCircleCheck } from "react-icons/fa6";
+
 import Avatar from "../Avatar/Avatar";
 import avatars_data from '../../db/Avatars/avatars';
 import logo from "../../images/logo.png"
@@ -27,17 +29,21 @@ return(
       </Row>
       <Row>
         <Col sm={12} md={12} lg={12} className='schooled-cnt'>
-          <h1>{attr.headerTitle}</h1>
-          <ul>
+          <h1>
+            {attr.headerTitle}
             {
-              attr.headerDesc.map((el,index)=>{
-                return(
-                  <li key={index}>{el}</li>
-                )
-              })
+              attr.hasLogo ? <img src={attr.headerSmile}  alt="go pro header"/> : ""
             }
-          </ul>
-          <Button variant="primary">{attr.headerBtn}</Button>
+          </h1>
+          {
+            attr.goPro ? <h4>{attr.goPro}</h4> : ""
+          } 
+          {
+            attr.hasTwoBtn ?
+              ""
+              : 
+              <Button variant="primary">{attr.headerBtn}</Button>
+          }
         </Col>
       </Row>
       <Row>
@@ -47,6 +53,7 @@ return(
       </Row>
       <Row>
         {
+          attr.areAvatar ?
           avatars_data.map((avatar,index)=>{
             return(
               <Col sm={12} md={3} lg={3} key={index}>
@@ -54,6 +61,41 @@ return(
               </Col>
             )
           })
+          :
+          <Table striped bordered hover variant="dark">
+            <thead>
+            <tr>
+                <th></th>
+                <th> <Button variant="primary">{attr.headerBtn}</Button></th>
+                <th><Button variant="primary">{attr.headerBtnTwo}</Button></th>
+              </tr>
+              <tr>
+                <th></th>
+                <th>88.99</th>
+                <th>269.99</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+               
+                <td>Unlimited access to all tutorials</td>
+                <td><FaCircleCheck/></td>
+                <td><FaCircleCheck/></td>
+              </tr>
+              <tr>
+                
+                <td>Access Smile School private forum</td>
+                <td><FaCircleCheck/></td>
+                <td><FaCircleCheck/></td>
+              </tr>
+              <tr>
+                
+                <td>Access Smiles contents & Smiles Analysis</td>
+                <td><FaCircleCheck/></td>
+                <td><FaCircleCheck/></td>
+              </tr>
+            </tbody>
+          </Table>
         }
       </Row>
      </Container>

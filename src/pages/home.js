@@ -5,7 +5,8 @@ const Home = () =>{
     const attr = {
         headerTitle:"Get schooled",
         headerDesc:["smile","grin","laugh"],
-        headerBtn:"register for free"
+        headerBtn:"register for free",
+        areAvatar:true
     }
 
     return(
