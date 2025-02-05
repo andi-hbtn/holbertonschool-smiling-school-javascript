@@ -4,7 +4,8 @@ import avatars_data from '../../db/Avatars/avatars';
 import logo from "../../images/logo.png"
 import "./Header.css";
 
-const Header = () =>{
+const Header = ({attr}) =>{
+  console.log("attr---",attr);
 return(
    <header>
      <Container>
@@ -14,21 +15,29 @@ return(
         </Col>
         <Col sm={7} md={7} lg={4}>
             <ul className='menu-container'>
-                <li>Course</li>
-                <li>Price</li>
+                <li>
+                  <a href='/'>Home</a>
+                </li>
+                <li>
+                  <a href='/go-pro'>Go pro</a>
+                </li>
                 <li>Login</li>
             </ul>
         </Col>
       </Row>
       <Row>
         <Col sm={12} md={12} lg={12} className='schooled-cnt'>
-          <h1>Get schooled</h1>
+          <h1>{attr.headerTitle}</h1>
           <ul>
-            <li>smile</li>
-            <li>grin</li>
-            <li>laugh</li>
+            {
+              attr.headerDesc.map((el,index)=>{
+                return(
+                  <li key={index}>{el}</li>
+                )
+              })
+            }
           </ul>
-          <Button variant="primary">register for free</Button>
+          <Button variant="primary">{attr.headerBtn}</Button>
         </Col>
       </Row>
       <Row>

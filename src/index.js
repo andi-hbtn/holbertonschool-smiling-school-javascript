@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from "./pages/home";
+import GoPro from './pages/goPro';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,6 +13,7 @@ root.render(
       <BrowserRouter>
         <Routes>
             <Route path="" element={<Home />} />
+            <Route path="go-pro" element={<GoPro/>}/>
         </Routes>
      </BrowserRouter>
   //</React.StrictMode>

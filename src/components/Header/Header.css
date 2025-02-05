@@ -21,6 +21,11 @@ header{
     color: #ffffff;
 }
 
+.menu-container > li > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .schooled-cnt{margin-top: 80px;}
 
 .schooled-cnt > h1{
